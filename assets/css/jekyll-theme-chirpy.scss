@@ -2,10 +2,6 @@
 ---
 
 /* prettier-ignore */
-@import 'main
-{%- if jekyll.environment == 'production' -%}
-.bundle
-{%- endif -%}
-';
+@import 'main.bundle';
 
 /* append your custom style below */
