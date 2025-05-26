@@ -34,16 +34,16 @@ jobs:
           bundler-cache: true
           cache-version: 1
           
-      - name: npm build
-        run: npm install && npm run build
-        
       - name: Install Bundler
         run: gem install bundler
 
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v5
-
+        
+      - name: npm build
+        run: npm install && npm run build
+        
       - name: Build with Jekyll
         run: bundle exec jekyll build --trace --destination _site --baseurl "${{ steps.pages.outputs.base_path }}"
         env:
